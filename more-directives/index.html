@@ -1,0 +1,27 @@
+<html ng-app="moreDirectivesApp">
+
+<head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>More Directives App</h1>
+    <div ng-controller="MoreDirectivesCtrl as ctrl">
+        
+         <span>Click the checkbox   <input type="checkbox" ng-model="ctrl.checkbox"></input></span>
+        <p ng-hide="ctrl.checkbox">Whatsup Hatti!!!</p>    
+        <h1><p ng-show="ctrl.checkbox">Ceiling</p></h1>   
+        <div ng-repeat="obj in ctrl.myList">
+            <p>Index : {{$index}}
+            <p>Name : {{obj.name}}</p>
+            <p>Age : {{obj.age}}</p>
+            <hr>
+        </div>
+
+        </p>
+    </div>
+
+</body>
+
+</html>

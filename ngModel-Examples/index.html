@@ -1,0 +1,26 @@
+<html ng-app="ngModelExamples">
+
+<head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="ExamplesCtrl">
+
+        <p>TextBox: <input ng-model="textValue" type="text"></input></p>
+        <p>CheckBox: <input ng-model="booleanValue" type="checkbox"></input></p>
+        <p>Date: <input ng-model="dateValue" type="date"></input></p>
+        <p>Radio:
+            <input ng-model="radioValue" type="radio" value="opt1"> Option1</input>
+            <input ng-model="radioValue" type="radio" value="opt2"> Option2</input>
+            <input ng-model="radioValue" type="radio" value="opt3"> Option3</input>
+        </p>
+        <p>Text input: {{textValue}}</p>
+        <p>CheckBox input: {{booleanValue}}</p>
+        <p>Date input: {{dateValue}}</p>
+        <p>Radio input: {{radioValue}}</p>
+
+
+</body>
+
+</html>
