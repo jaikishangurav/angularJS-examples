@@ -10,6 +10,11 @@ function ContactCtrl() {
         { "gender": "female", "name": { "title": "mademoiselle", "first": "nina", "last": "mathieu" }, "location": { "street": "6386 rue bataille", "city": "belmont-sur-lausanne", "state": "aargau", "postcode": 1281 }, "email": "nina.mathieu@example.com", "login": { "username": "beautifulbird396", "password": "rusty2", "salt": "sh9qBcPV", "md5": "ba19131c3889631a92a31d1d9a6c1d91", "sha1": "eda523ad3968d0973cacc4de8cfd9b03ae7ad917", "sha256": "f76aae876933df4ae6d58bca86d64f122030d1d8a4b281f9518f0cc31c27ff44" }, "dob": "1973-12-23 23:21:37", "registered": "2012-12-01 07:30:38", "phone": "(372)-965-4663", "cell": "(581)-066-7633", "id": { "name": "AVS", "value": "756.PZJQ.THYF.36" }, "picture": { "large": "https://randomuser.me/api/portraits/women/73.jpg", "medium": "https://randomuser.me/api/portraits/med/women/73.jpg", "thumbnail": "https://randomuser.me/api/portraits/thumb/women/73.jpg" }, "nat": "CH" },
         { "gender": "male", "name": { "title": "mr", "first": "stanley", "last": "graham" }, "location": { "street": "7841 mcclellan rd", "city": "gresham", "state": "wyoming", "postcode": 62335 }, "email": "stanley.graham@example.com", "login": { "username": "bigladybug573", "password": "usmc", "salt": "IZ8lqICi", "md5": "76abe797a392826e0c23d1da239f27e5", "sha1": "9f3062867fd186bf6479c7d47f199567fa3bf1b7", "sha256": "ec8062a253d7536aef1edd9a19d1122d207daa0f3e403b4f67071993c92c3176" }, "dob": "1964-03-25 12:15:47", "registered": "2006-12-08 21:15:30", "phone": "(120)-217-3810", "cell": "(830)-527-9315", "id": { "name": "SSN", "value": "226-34-2878" }, "picture": { "large": "https://randomuser.me/api/portraits/men/69.jpg", "medium": "https://randomuser.me/api/portraits/med/men/69.jpg", "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg" }, "nat": "US" }
     ];
-    console.log(this.contacts[0].name);
+    this.selectedContact = this.contacts[0];
+    console.log(selectedContact);
+
+    this.selectContact = function (index) {
+        this.selectedContact = this.contacts[index];
+    }
 }
 
