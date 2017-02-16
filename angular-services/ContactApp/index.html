@@ -7,12 +7,15 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
             crossorigin="anonymous">
-            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
             <script src="app.js"></script>
 </head>
 
 <body>
-    <h1>My Contact App</h1>
+    <div ng-controller="HeaderCtrl as header">
+        <h1>{{header.appTitle}}</h1>
+    </div>
+
     <div class="container" ng-controller="ContactCtrl as ctrl">
         <div class="row">
             <ul class="list-group">
@@ -48,7 +51,10 @@
             </div>
         </div>
     </div>
-
+    <div ng-controller="FooterCtrl as footer">
+        <h1>{{footer.appTitle}}</h1>
+        <h4>{{footer.builtDate}}</h4>
+    </div>
 
 </body>
 
