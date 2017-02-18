@@ -9,14 +9,15 @@
             crossorigin="anonymous">
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
             <script src="app.js"></script>
+            <script src="appConfig.service.js"></script>
+            <script src="appName.service.js"></script>
+            <script src="contact.controller.js"></script>
+            <script src="contactData.service.js"></script>
 </head>
 
 <body>
-    <div ng-controller="HeaderCtrl as header">
-        <h1>{{header.appTitle}}</h1>
-    </div>
-
     <div class="container" ng-controller="ContactCtrl as ctrl">
+        <h1>{{ctrl.appTitle}}</h1>
         <div class="row">
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
@@ -50,10 +51,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div ng-controller="FooterCtrl as footer">
-        <h1>{{footer.appTitle}}</h1>
-        <h4>{{footer.builtDate}}</h4>
     </div>
 
 </body>
